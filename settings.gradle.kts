@@ -14,6 +14,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MemPool Space"
-include ":api"
-include ":app"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "MemPoolSpace"
+include(":api")
+include(":app")

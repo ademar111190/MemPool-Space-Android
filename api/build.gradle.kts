@@ -4,18 +4,18 @@ plugins {
 }
 
 android {
-    namespace "mempool.space.api"
-    compileSdk 33
+    namespace = "mempool.space.api"
+    compileSdk = 33
 
     defaultConfig {
-        minSdk 21
-        targetSdk 33
-        consumerProguardFiles "consumer-rules.pro"
+        minSdk = 21
+        targetSdk = 33
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "11"
