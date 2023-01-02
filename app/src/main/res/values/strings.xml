@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MemPool Space</string>
+    <string name="page_title_mainnet">Mainnet</string>
+    <string name="page_title_signet">Signet</string>
+    <string name="page_title_testnet">Testnet</string>
+    <string name="page_title_console">Console</string>
+    <string name="page_title_settings">Settings</string>
 </resources>

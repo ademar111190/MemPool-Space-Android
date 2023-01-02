@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.coreKtx)
     implementation(libs.lifecycleRuntimeKtx)
+    implementation(libs.navigation)
     testImplementation(libs.junit)
     debugImplementation(libs.bundles.composeDebug)
 }

@@ -11,6 +11,7 @@ composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "c
 coreKtx = { module = "androidx.core:core-ktx", version = "1.9.0" }
 junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.5.1" }
+navigation = { module = "androidx.navigation:navigation-compose", version = "2.5.3" }
 
 [bundles]
 compose = ["composeActivity", "composeMaterial3", "composePreview", "composeUi"]
