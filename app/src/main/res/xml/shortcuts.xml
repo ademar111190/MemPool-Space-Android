@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_mainnet_shortcut"
+        android:shortcutDisabledMessage="@string/page_title_mainnet"
+        android:shortcutId="mainnet"
+        android:shortcutLongLabel="@string/page_title_mainnet"
+        android:shortcutShortLabel="@string/page_title_mainnet">
+        <intent
+            android:action="mempool.space.action.mainnet"
+            android:targetClass="mempool.space.activity.StartActivity"
+            android:targetPackage="mempool.space" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_signet_shortcut"
+        android:shortcutDisabledMessage="@string/page_title_signet"
+        android:shortcutId="signet"
+        android:shortcutLongLabel="@string/page_title_signet"
+        android:shortcutShortLabel="@string/page_title_signet">
+        <intent
+            android:action="mempool.space.action.signet"
+            android:targetClass="mempool.space.activity.StartActivity"
+            android:targetPackage="mempool.space" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_testnet_shortcut"
+        android:shortcutDisabledMessage="@string/page_title_testnet"
+        android:shortcutId="testnet"
+        android:shortcutLongLabel="@string/page_title_testnet"
+        android:shortcutShortLabel="@string/page_title_testnet">
+        <intent
+            android:action="mempool.space.action.testnet"
+            android:targetClass="mempool.space.activity.StartActivity"
+            android:targetPackage="mempool.space" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_console_shortcut"
+        android:shortcutDisabledMessage="@string/page_title_console"
+        android:shortcutId="console"
+        android:shortcutLongLabel="@string/page_title_console"
+        android:shortcutShortLabel="@string/page_title_console">
+        <intent
+            android:action="mempool.space.action.console"
+            android:targetClass="mempool.space.activity.StartActivity"
+            android:targetPackage="mempool.space" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_shortcut"
+        android:shortcutDisabledMessage="@string/page_title_settings"
+        android:shortcutId="settings"
+        android:shortcutLongLabel="@string/page_title_settings"
+        android:shortcutShortLabel="@string/page_title_settings">
+        <intent
+            android:action="mempool.space.action.settings"
+            android:targetClass="mempool.space.activity.StartActivity"
+            android:targetPackage="mempool.space" />
+    </shortcut>
+
+</shortcuts>

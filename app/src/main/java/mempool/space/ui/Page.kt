@@ -13,31 +13,31 @@ sealed class Page(
     object MainNetPage : Page(
         route = "main_net_page",
         title = R.string.page_title_mainnet,
-        icon = R.drawable.currency_bitcoin,
+        icon = R.drawable.ic_mainnet,
     )
 
     object SignNetPage : Page(
         route = "sign_net_page",
         title = R.string.page_title_signet,
-        icon = R.drawable.design_services,
+        icon = R.drawable.ic_signet,
     )
 
     object TestNetPage : Page(
         route = "test_net_page",
         title = R.string.page_title_testnet,
-        icon = R.drawable.bug_report,
+        icon = R.drawable.ic_testnet,
     )
 
     object ConsolePage : Page(
         route = "console_page",
         title = R.string.page_title_console,
-        icon = R.drawable.terminal,
+        icon = R.drawable.ic_console,
     )
 
     object SettingsPage : Page(
         route = "settings_page",
         title = R.string.page_title_settings,
-        icon = R.drawable.settings,
+        icon = R.drawable.ic_settings,
     )
 
 }

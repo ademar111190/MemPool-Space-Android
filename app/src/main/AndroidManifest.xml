@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.MemPoolSpace"
-        tools:targetApi="31">
+        tools:targetApi="33">
         <activity
             android:name=".activity.StartActivity"
             android:exported="true"
@@ -24,8 +24,8 @@
             </intent-filter>
 
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
 
         <activity android:name=".activity.HomeActivity" />

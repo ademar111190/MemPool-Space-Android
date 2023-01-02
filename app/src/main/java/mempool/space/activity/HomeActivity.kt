@@ -1,5 +1,7 @@
 package mempool.space.activity
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,6 +30,7 @@ class HomeActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             MemPoolSpaceTheme {
                 Surface(
@@ -36,6 +39,17 @@ class HomeActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     var selectedIndex by remember { mutableStateOf(0) }
+
+                    navController.addOnDestinationChangedListener { _, destination, _ ->
+                        selectedIndex = when (destination.route) {
+                            Page.MainNetPage.route -> 0
+                            Page.SignNetPage.route -> 1
+                            Page.TestNetPage.route -> 2
+                            Page.ConsolePage.route -> 3
+                            Page.SettingsPage.route -> 4
+                            else -> 0
+                        }
+                    }
 
                     Scaffold(bottomBar = {
                         NavigationBar {
@@ -70,7 +84,7 @@ class HomeActivity : ComponentActivity() {
                     }) { padding ->
                         NavHost(
                             navController,
-                            Page.MainNetPage.route,
+                            intent?.getStringExtra(INITIAL_ROUTE) ?: Page.MainNetPage.route,
                             Modifier.padding(padding),
                         ) {
                             composable(Page.MainNetPage.route) {
@@ -92,15 +106,25 @@ class HomeActivity : ComponentActivity() {
                                 )
                             }
                             composable(Page.ConsolePage.route) {
-                                SettingsPage(navController)
+                                ConsolePage(navController)
                             }
                             composable(Page.SettingsPage.route) {
-                                ConsolePage(navController)
+                                SettingsPage(navController)
                             }
                         }
                     }
                 }
             }
+        }
+    }
+
+    companion object {
+        private const val INITIAL_ROUTE = "mempool.space.action.INITIAL_ROUTE"
+
+        fun intent(context: Context, initialRoute: String? = null): Intent {
+            val intent = Intent(context, HomeActivity::class.java)
+            intent.putExtra(INITIAL_ROUTE, initialRoute)
+            return intent
         }
     }
 }
