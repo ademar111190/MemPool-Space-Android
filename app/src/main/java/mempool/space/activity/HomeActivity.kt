@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import mempool.space.model.Network
 import mempool.space.ui.Page
 import mempool.space.ui.page.ConsolePage
@@ -21,6 +22,7 @@ import mempool.space.ui.page.NetPage
 import mempool.space.ui.page.SettingsPage
 import mempool.space.ui.theme.MemPoolSpaceTheme
 
+@AndroidEntryPoint
 class HomeActivity : ComponentActivity() {
 
     @OptIn(ExperimentalMaterial3Api::class)

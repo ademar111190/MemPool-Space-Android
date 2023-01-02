@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     alias(libs.plugins.androidLib)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -22,7 +26,13 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
+    kapt(libs.hiltCompiler)
     implementation(libs.coreKtx)
+    implementation(libs.hiltAndroid)
     testImplementation(libs.junit)
 }

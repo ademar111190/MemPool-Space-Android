@@ -1,10 +1,11 @@
-package mempool.space
+package mempool.space.activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import mempool.space.activity.HomeActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class StartActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
