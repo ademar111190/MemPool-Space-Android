@@ -5,7 +5,8 @@
     <string name="page_title_testnet">Rede de Testes</string>
     <string name="page_title_console">Console</string>
     <string name="page_title_settings">Configurações</string>
-    <string name="setting_mempool_url">MemPool Url Customizada:</string>
+    <string name="setting_mempool_url">Url para MemPool Customizada:</string>
     <string name="setting_mempool_url_reset">Resetar</string>
     <string name="setting_mempool_url_save">Salvar</string>
+    <string name="setting_mempool_url_invalid">Url para MemPool Inválida</string>
 </resources>

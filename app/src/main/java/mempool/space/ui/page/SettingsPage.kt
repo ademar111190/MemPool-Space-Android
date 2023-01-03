@@ -8,17 +8,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
+import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.launch
 import mempool.space.R
 import mempool.space.storage.SimpleStorage
 import mempool.space.usecase.UrlChecker
 
-@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsPage(
-    navController: NavController,
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SettingsPage(
     storage: SimpleStorage,
     urlChecker: UrlChecker,
     modifier: Modifier = Modifier,
 ) {
+    val coroutineScope = rememberCoroutineScope()
+    var memPoolUrl by rememberSaveable { mutableStateOf(storage.memPoolUrl) }
+    var memPoolUrlButtonEnabled by rememberSaveable { mutableStateOf(true) }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -35,19 +41,28 @@ import mempool.space.usecase.UrlChecker
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top,
         ) {
-            var memPoolUrl by rememberSaveable { mutableStateOf(storage.memPoolUrl) }
-            TextField(value = memPoolUrl, modifier = Modifier
-                .fillMaxWidth()
-                .padding(
-                    start = 16.dp,
-                    top = 0.dp,
-                    end = 16.dp,
-                    bottom = 8.dp,
-                ), onValueChange = {
-                memPoolUrl = it
-            }, label = {
-                Text(stringResource(R.string.setting_mempool_url))
-            })
+            TextField(
+                value = memPoolUrl,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        start = 16.dp,
+                        top = 0.dp,
+                        end = 16.dp,
+                        bottom = 8.dp,
+                    ),
+                onValueChange = {
+                    memPoolUrl = it
+                    coroutineScope.coroutineContext.cancelChildren()
+                    coroutineScope.launch {
+                        memPoolUrlButtonEnabled = urlChecker.isUrlValid(memPoolUrl)
+                    }
+                },
+                label = {
+                    Text(stringResource(R.string.setting_mempool_url))
+                },
+            )
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
@@ -57,6 +72,7 @@ import mempool.space.usecase.UrlChecker
                     onClick = {
                         storage.resetMemPoolUrl()
                         memPoolUrl = storage.memPoolUrl
+                        memPoolUrlButtonEnabled = true
                     },
                     modifier = Modifier.padding(
                         start = 16.dp,
@@ -77,7 +93,7 @@ import mempool.space.usecase.UrlChecker
                         end = 16.dp,
                         bottom = 8.dp,
                     ),
-                    enabled = urlChecker.isUrlValid(memPoolUrl),
+                    enabled = memPoolUrlButtonEnabled,
                 ) {
                     Text(stringResource(R.string.setting_mempool_url_save))
                 }

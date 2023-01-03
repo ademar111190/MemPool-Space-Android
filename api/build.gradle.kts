@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     alias(libs.plugins.androidLib)
     alias(libs.plugins.kotlinAndroid)
@@ -32,7 +30,13 @@ kapt {
 
 dependencies {
     kapt(libs.hiltCompiler)
+    kapt(libs.moshiCompiler)
+
+    implementation(libs.bundles.network)
+
     implementation(libs.coreKtx)
+    implementation(libs.coroutine)
     implementation(libs.hiltAndroid)
+
     testImplementation(libs.junit)
 }

@@ -8,4 +8,5 @@
     <string name="setting_mempool_url">Custom MemPool Url:</string>
     <string name="setting_mempool_url_reset">Reset</string>
     <string name="setting_mempool_url_save">Save</string>
+    <string name="setting_mempool_url_invalid">Invalid MemPool Url</string>
 </resources>

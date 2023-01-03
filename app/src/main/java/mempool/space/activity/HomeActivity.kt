@@ -115,7 +115,7 @@ class HomeActivity : ComponentActivity() {
                                 ConsolePage(navController)
                             }
                             composable(Page.SettingsPage.route) {
-                                SettingsPage(navController, storage, urlChecker)
+                                SettingsPage(storage, urlChecker)
                             }
                         }
                     }

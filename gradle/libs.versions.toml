@@ -1,7 +1,10 @@
 [versions]
 compose = "1.3.2"
+coroutine = "1.3.9"
 hilt = "2.44"
 kotlin = "1.7.20"
+moshi = "1.14.0"
+retrofit = "2.9.0"
 
 [libraries]
 composeActivity = { module = "androidx.activity:activity-compose", version = "1.6.1" }
@@ -11,15 +14,22 @@ composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 coreKtx = { module = "androidx.core:core-ktx", version = "1.9.0" }
+coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
 hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.5.1" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshiCompiler = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
 navigation = { module = "androidx.navigation:navigation-compose", version = "2.5.3" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 
 [bundles]
 compose = ["composeActivity", "composeMaterial3", "composePreview", "composeUi"]
 composeDebug = ["composeUiTestManifest", "composeUiTooling"]
+network = ["moshi", "moshiKotlin", "retrofit", "retrofitMoshi"]
 
 [plugins]
 androidApp = { id = "com.android.application", version = "7.3.1" }
