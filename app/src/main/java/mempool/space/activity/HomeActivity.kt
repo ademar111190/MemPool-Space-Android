@@ -18,14 +18,20 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import mempool.space.model.Network
+import mempool.space.storage.SimpleStorage
 import mempool.space.ui.Page
 import mempool.space.ui.page.ConsolePage
 import mempool.space.ui.page.NetPage
 import mempool.space.ui.page.SettingsPage
 import mempool.space.ui.theme.MemPoolSpaceTheme
+import mempool.space.usecase.UrlChecker
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeActivity : ComponentActivity() {
+
+    @Inject lateinit var storage: SimpleStorage
+    @Inject lateinit var urlChecker: UrlChecker
 
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,7 +115,7 @@ class HomeActivity : ComponentActivity() {
                                 ConsolePage(navController)
                             }
                             composable(Page.SettingsPage.route) {
-                                SettingsPage(navController)
+                                SettingsPage(navController, storage, urlChecker)
                             }
                         }
                     }

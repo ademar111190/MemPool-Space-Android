@@ -5,4 +5,7 @@
     <string name="page_title_testnet">Testnet</string>
     <string name="page_title_console">Console</string>
     <string name="page_title_settings">Settings</string>
+    <string name="setting_mempool_url">Custom MemPool Url:</string>
+    <string name="setting_mempool_url_reset">Reset</string>
+    <string name="setting_mempool_url_save">Save</string>
 </resources>
