@@ -63,8 +63,10 @@ dependencies {
     implementation(libs.coreKtx)
     implementation(libs.coroutine)
     implementation(libs.hiltAndroid)
+    implementation(libs.hiltNavigationCompose)
     implementation(libs.lifecycleRuntimeKtx)
     implementation(libs.navigation)
+    implementation(libs.viewModelKtx)
 
     testImplementation(libs.junit)
 

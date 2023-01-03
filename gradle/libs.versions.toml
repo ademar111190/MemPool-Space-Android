@@ -16,6 +16,7 @@ composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "c
 coreKtx = { module = "androidx.core:core-ktx", version = "1.9.0" }
 coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
 hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.1.0-alpha01" }
 hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.5.1" }
@@ -25,6 +26,7 @@ moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi
 navigation = { module = "androidx.navigation:navigation-compose", version = "2.5.3" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.5.1" }
 
 [bundles]
 compose = ["composeActivity", "composeMaterial3", "composePreview", "composeUi"]
