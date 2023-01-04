@@ -32,11 +32,12 @@ dependencies {
     kapt(libs.hiltCompiler)
     kapt(libs.moshiCompiler)
 
+    implementation(libs.bundles.log)
     implementation(libs.bundles.network)
 
     implementation(libs.coreKtx)
     implementation(libs.coroutine)
     implementation(libs.hiltAndroid)
 
-    testImplementation(libs.junit)
+    testImplementation(libs.bundles.unitTest)
 }

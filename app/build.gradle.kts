@@ -58,6 +58,7 @@ dependencies {
     implementation(projects.api)
 
     implementation(libs.bundles.compose)
+    implementation(libs.bundles.log)
     implementation(libs.bundles.network)
 
     implementation(libs.coreKtx)
@@ -65,10 +66,11 @@ dependencies {
     implementation(libs.hiltAndroid)
     implementation(libs.hiltNavigationCompose)
     implementation(libs.lifecycleRuntimeKtx)
+    implementation(libs.material)
     implementation(libs.navigation)
     implementation(libs.viewModelKtx)
 
-    testImplementation(libs.junit)
+    testImplementation(libs.bundles.unitTest)
 
     debugImplementation(libs.bundles.composeDebug)
 }
