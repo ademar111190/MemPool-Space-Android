@@ -6,6 +6,7 @@ sealed class SettingsState {
 
     data class EditingUrl(
         val url: String,
+
     ) : SettingsState()
 
     data class CheckingUrl(
