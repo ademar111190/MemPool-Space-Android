@@ -17,5 +17,8 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "MemPoolSpace"
-include(":api")
-include(":app")
+include(
+    ":api",
+    ":biometric",
+    ":app",
+)

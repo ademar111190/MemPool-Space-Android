@@ -1,0 +1,8 @@
+<resources>
+    <string name="biometrics_no_hardware">Este dispositivo não suporta nenhuma autenticação biometrica.</string>
+    <string name="biometrics_unavailable">A biometria não esta disponível.</string>
+    <string name="biometrics_not_recognized">A biometria não foi reconhecida, por favor tente novamente.</string>
+    <string name="biometrics_prompt_title">Autenticação por biometria</string>
+    <string name="biometrics_prompt_subtitle">Usa sua biometria para acessar o conteúdo do aplicativo</string>
+    <string name="biometrics_prompt_negative">Cancelar</string>
+</resources>

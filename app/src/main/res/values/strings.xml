@@ -9,4 +9,8 @@
     <string name="setting_mempool_url_reset">Reset</string>
     <string name="setting_mempool_url_save">Save</string>
     <string name="setting_mempool_url_invalid">Invalid MemPool Url</string>
+    <string name="setting_actions_more">More</string>
+    <string name="setting_actions_share_logs">Share logs</string>
+    <string name="biometrics_labels">Biometrics</string>
+    <string name="biometrics_action_retry">Retry</string>
 </resources>

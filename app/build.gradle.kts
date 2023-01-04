@@ -56,11 +56,13 @@ dependencies {
     kapt(libs.moshiCompiler)
 
     implementation(projects.api)
+    implementation(projects.biometric)
 
     implementation(libs.bundles.compose)
     implementation(libs.bundles.log)
     implementation(libs.bundles.network)
 
+    implementation(libs.biometric)
     implementation(libs.coreKtx)
     implementation(libs.coroutine)
     implementation(libs.hiltAndroid)

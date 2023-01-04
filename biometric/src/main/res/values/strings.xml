@@ -1,0 +1,8 @@
+<resources>
+    <string name="biometrics_no_hardware">No biometric features available on this device.</string>
+    <string name="biometrics_unavailable">Biometric features are currently unavailable.</string>
+    <string name="biometrics_not_recognized">Biometric not recognized. Try again.</string>
+    <string name="biometrics_prompt_title">Biometric authentication</string>
+    <string name="biometrics_prompt_subtitle">Uses your biometric credential to access the app content</string>
+    <string name="biometrics_prompt_negative">Cancel</string>
+</resources>

@@ -3,6 +3,7 @@ package mempool.space.di
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Resources
+import androidx.biometric.BiometricManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,5 +23,10 @@ object SingletonModule {
     fun providesResources(
         @ApplicationContext context: Context,
     ): Resources = context.resources
+
+    @[Provides Singleton]
+    fun providesBiometricManager(
+        @ApplicationContext context: Context,
+    ): BiometricManager = BiometricManager.from(context)
 
 }
