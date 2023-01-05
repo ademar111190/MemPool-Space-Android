@@ -1,0 +1,19 @@
+{
+  "txid": "53719514a78caa6aebfed384e7b256fa9ed06f8ee949105635ca6dd348e4026d",
+  "vout": 0,
+  "prevout": {
+    "scriptpubkey": "0014c99fd000fb30137ae03fd2b28f52878e9b29194f",
+    "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 c99fd000fb30137ae03fd2b28f52878e9b29194f",
+    "scriptpubkey_type": "v0_p2wpkh",
+    "scriptpubkey_address": "bc1qex0aqq8mxqfh4cpl62eg755836djjx20yzuuu8",
+    "value": 46798
+  },
+  "scriptsig": "",
+  "scriptsig_asm": "",
+  "witness": [
+    "304402205ecc670d1f9f73a14d9a1bd79e93da3a9b56fd61a2df787cc3ce58f2d2c8f373022017d56413d533851cdb4e2824f4b0cfab6eb62e3486e19f3a6133991f6342684801",
+    "031f6fa906bb52f3e1bdc59156a5659ce1aa251eaf26f411413c76409360ef7205"
+  ],
+  "is_coinbase": false,
+  "sequence": 4294967293
+}

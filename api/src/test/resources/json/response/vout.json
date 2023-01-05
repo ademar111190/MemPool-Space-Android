@@ -1,0 +1,7 @@
+{
+  "scriptpubkey": "0014c99fd000fb30137ae03fd2b28f52878e9b29194f",
+  "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 c99fd000fb30137ae03fd2b28f52878e9b29194f",
+  "scriptpubkey_type": "v0_p2wpkh",
+  "scriptpubkey_address": "bc1qex0aqq8mxqfh4cpl62eg755836djjx20yzuuu8",
+  "value": 46093
+}

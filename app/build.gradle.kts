@@ -76,3 +76,7 @@ dependencies {
 
     debugImplementation(libs.bundles.composeDebug)
 }
+
+configurations.testImplementation {
+    exclude(module = "logback-android")
+}

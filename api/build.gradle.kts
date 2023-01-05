@@ -41,3 +41,7 @@ dependencies {
 
     testImplementation(libs.bundles.unitTest)
 }
+
+configurations.testImplementation {
+    exclude(module = "logback-android")
+}
