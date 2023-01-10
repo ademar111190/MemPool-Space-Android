@@ -3,6 +3,9 @@ package mempool.space
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import mempool.space.adapter.BigDecimalAdapter
+import mempool.space.adapter.BigIntegerAdapter
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockWebServer
@@ -17,12 +20,16 @@ fun Any.readJson(
     .bufferedReader().use { it.readText() }
 
 fun moshi(): Moshi =
-    Moshi.Builder().build()
+    Moshi.Builder()
+        .add(BigDecimalAdapter)
+        .add(BigIntegerAdapter)
+        .add(KotlinJsonAdapterFactory())
+        .build()
 
 inline fun <reified T> moshiAdapter(): JsonAdapter<T> =
     moshi().adapter(T::class.java)
 
-inline fun <reified  T> moshiListAdapter(): JsonAdapter<List<T>> =
+inline fun <reified T> moshiListAdapter(): JsonAdapter<List<T>> =
     moshi().adapter(Types.newParameterizedType(MutableList::class.java, T::class.java))
 
 fun okHttpLogging(): HttpLoggingInterceptor =

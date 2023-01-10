@@ -12,7 +12,7 @@ import kotlin.coroutines.resumeWithException
 
 @Reusable
 class UrlChecker @Inject constructor() {
-    // Just call one of the available apis and chceck if it is a success
+    // Just call one of the available apis and check if it is a success
     suspend fun isUrlValid(url: String): Boolean {
         val client = OkHttpClient()
         return try {

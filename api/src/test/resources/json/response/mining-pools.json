@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "poolId": 111,
+      "name": "Foundry USA",
+      "link": "https://foundrydigital.com/",
+      "blockCount": 48,
+      "rank": 1,
+      "emptyBlocks": 0,
+      "slug": "foundryusa"
+    }
+  ],
+  "blockCount": 168,
+  "lastEstimatedHashrate": 284421401046070800000
+}

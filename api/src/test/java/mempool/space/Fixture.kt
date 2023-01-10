@@ -1,6 +1,7 @@
 package mempool.space
 
 import mempool.space.model.*
+import java.math.BigInteger
 
 val difficultyAdjustment = DifficultyAdjustment(
     progressPercent = 19.444444444444446,
@@ -105,6 +106,49 @@ val addressUtxo = AddressUtxo(
     value = 644069114,
 )
 
+val pool = Pool(
+    id = 137,
+    name = "Unknown",
+    slug = "unknown",
+)
+
+val poolMiningPools = Pool(
+    poolId = 111,
+    name = "Foundry USA",
+    link = "https://foundrydigital.com/",
+    blockCount = 48,
+    rank = 1,
+    emptyBlocks = 0,
+    slug = "foundryusa",
+)
+
+val poolMiningPool = Pool(
+    id = 111,
+    name = "Foundry USA",
+    link = "https://foundrydigital.com/",
+    slug = "foundryusa",
+    addresses = listOf(
+        "1FFxkVijzvUPUeHgkFjBk2Qw8j3wQY2cDw",
+        "12KKDt4Mj7N5UAkQMN7LtPZMayenXHa8KL",
+        "bc1qxhmdufsvnuaaaer4ynz88fspdsxq2h9e9cetdj",
+    ),
+    regexes = listOf(
+        "Foundry USA Pool",
+        "/2cDw/",
+    ),
+)
+
+val extra = Extra(
+    coinbaseRaw = "04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73",
+    medianFee = 0,
+    feeRange = listOf(0, 0, 0, 0, 0, 0, 0),
+    reward = 5000000000,
+    totalFees = 0,
+    averageFee = 0,
+    averageFeeRate = 0,
+    pool = pool,
+)
+
 const val blockHash = "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
 
 val block = Block(
@@ -121,6 +165,12 @@ val block = Block(
     nonce = 2083236893,
     bits = 486604799,
     difficulty = 1,
+    extra = null,
+)
+
+val blockPlusExtra = block.copy(
+    extra = extra,
+    mediantime = null,
 )
 
 val blockStatus = BlockStatus(
@@ -163,4 +213,36 @@ val blockTransaction = Transaction(
         blockHash = "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
         blockTime = 1231006505,
     ),
+)
+
+val miningPools = MiningPools(
+    lastEstimatedHashRate = BigInteger("284421401046070800000"),
+    blockCount = 168,
+    pools = listOf(poolMiningPools),
+)
+
+val blockCount = BlockCount(
+    hour24 = 48,
+    week1 = 322,
+    all = 15932,
+)
+
+val blockShare = BlockShare(
+    hour24 = 0.2891566265060241,
+    week1 = 0.29193109700815956,
+    all = 0.02065558000147799,
+)
+
+val miningPool = MiningPool(
+    estimatedHashRate = BigInteger("82053492127869000000"),
+    blockShare = blockShare,
+    blockCount = blockCount,
+    pool = poolMiningPool,
+)
+
+val hashRate = HashRate(
+    timestamp = 1670803200,
+    avgHashRate = BigInteger("64172430960019090000"),
+    share = 0.243243,
+    poolName = "Foundry USA"
 )

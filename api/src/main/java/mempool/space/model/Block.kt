@@ -14,8 +14,9 @@ data class Block(
     @Json(name = "weight") val weight: Long,
     @Json(name = "merkle_root") val merkleRoot: String,
     @Json(name = "previousblockhash") val previousblockhash: String?,
-    @Json(name = "mediantime") val mediantime: Long,
+    @Json(name = "mediantime") val mediantime: Long?,
     @Json(name = "nonce") val nonce: Long,
     @Json(name = "bits") val bits: Long,
     @Json(name = "difficulty") val difficulty: Long,
+    @Json(name = "extras") val extra: Extra?,
 )
