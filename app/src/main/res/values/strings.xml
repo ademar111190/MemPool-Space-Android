@@ -13,4 +13,10 @@
     <string name="setting_actions_share_logs">Share logs</string>
     <string name="biometrics_labels">Biometrics</string>
     <string name="biometrics_action_retry">Retry</string>
+    <string name="console_description">Explore the MemPool Api</string>
+    <string name="console_mempool_api_region_address">Address</string>
+    <string name="console_mempool_api_region_block">Block</string>
+    <string name="console_mempool_api_region_mining">Mining</string>
+    <string name="console_mempool_api_region_fees">Fees</string>
+    <string name="console_mempool_api_region_mempool">Mempool</string>
 </resources>

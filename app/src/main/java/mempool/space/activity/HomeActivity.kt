@@ -18,9 +18,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import mempool.space.model.Network
+import mempool.space.page.console.ConsolePage
 import mempool.space.page.settings.SettingsPage
 import mempool.space.ui.Page
-import mempool.space.ui.page.ConsolePage
 import mempool.space.ui.page.NetPage
 import mempool.space.ui.theme.MemPoolSpaceTheme
 
@@ -106,7 +106,7 @@ class HomeActivity : ComponentActivity() {
                                 )
                             }
                             composable(Page.ConsolePage.route) {
-                                ConsolePage(navController)
+                                ConsolePage()
                             }
                             composable(Page.SettingsPage.route) {
                                 SettingsPage()

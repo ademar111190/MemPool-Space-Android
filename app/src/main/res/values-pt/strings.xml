@@ -13,4 +13,10 @@
     <string name="setting_actions_share_logs">Compartilhar logs</string>
     <string name="biometrics_labels">Biometria</string>
     <string name="biometrics_action_retry">Tentar Novamente</string>
+    <string name="console_description">Explore a Api do MemPool</string>
+    <string name="console_mempool_api_region_address">Endereços</string>
+    <string name="console_mempool_api_region_block">Blocos</string>
+    <string name="console_mempool_api_region_mining">Mineiração</string>
+    <string name="console_mempool_api_region_fees">Taxas</string>
+    <string name="console_mempool_api_region_mempool">Mempool</string>
 </resources>
