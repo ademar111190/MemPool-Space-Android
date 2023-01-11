@@ -6,6 +6,7 @@ import com.squareup.moshi.Types
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import mempool.space.adapter.BigDecimalAdapter
 import mempool.space.adapter.BigIntegerAdapter
+import mempool.space.adapter.HistogramAdapter
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockWebServer
@@ -23,6 +24,7 @@ fun moshi(): Moshi =
     Moshi.Builder()
         .add(BigDecimalAdapter)
         .add(BigIntegerAdapter)
+        .add(HistogramAdapter)
         .add(KotlinJsonAdapterFactory())
         .build()
 

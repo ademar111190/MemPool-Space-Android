@@ -140,4 +140,58 @@ interface MemPoolSpaceApi {
         @Path("timePeriod") timePeriod: TimePeriod,
     ): Response<HashRateDifficulty>
 
+    // https://mempool.space/docs/api/rest#get-reward-stats
+    @GET("/api/v1/mining/reward-stats/{blockCount}")
+    suspend fun getRewardStats(
+        @Path("blockCount") blockCount: Long,
+    ): Response<RewardStats>
+
+    // https://mempool.space/docs/api/rest#get-block-fees
+    @GET("/api/v1/mining/blocks/fees/{timePeriod}")
+    suspend fun getBlockFees(
+        @Path("timePeriod") timePeriod: TimePeriod,
+    ): Response<List<BlockFee>>
+
+    // https://mempool.space/docs/api/rest#get-block-rewards
+    @GET("/api/v1/mining/blocks/rewards/{timePeriod}")
+    suspend fun getBlockRewards(
+        @Path("timePeriod") timePeriod: TimePeriod,
+    ): Response<List<BlockReward>>
+
+    // https://mempool.space/docs/api/rest#get-block-feerates
+    @GET("/api/v1/mining/blocks/fee-rates/{timePeriod}")
+    suspend fun getBlockFeeRates(
+        @Path("timePeriod") timePeriod: TimePeriod,
+    ): Response<List<FeeRate>>
+
+    // https://mempool.space/docs/api/rest#get-sizes-weights
+    @GET("/api/v1/mining/blocks/sizes-weights/{timePeriod}")
+    suspend fun getSizesWeights(
+        @Path("timePeriod") timePeriod: TimePeriod,
+    ): Response<SizesWeights>
+
+    // Fees
+
+    // https://mempool.space/docs/api/rest#get-mempool-blocks-fees
+    @GET("/api/v1/fees/mempool-blocks")
+    suspend fun getMempoolBlocksFees(): Response<List<MempoolBlock>>
+
+    // https://mempool.space/docs/api/rest#get-recommended-fees
+    @GET("/api/v1/fees/recommended")
+    suspend fun getRecommendedFees(): Response<RecommendedFee>
+
+    // Mempool
+
+    // https://mempool.space/docs/api/rest#get-mempool
+    @GET("/api/mempool")
+    suspend fun getMempool(): Response<Mempool>
+
+    // https://mempool.space/docs/api/rest#get-mempool-transaction-ids
+    @GET("/api/mempool/txids")
+    suspend fun getMempoolTransactionIds(): Response<List<String>>
+
+    // https://mempool.space/docs/api/rest#get-mempool-recent
+    @GET("/api/mempool/recent")
+    suspend fun getMempoolRecent(): Response<List<MempoolRecent>>
+
 }

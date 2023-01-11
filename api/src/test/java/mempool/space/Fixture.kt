@@ -265,3 +265,101 @@ val hashRateDifficulty = HashRateDifficulty(
     currentHashRate = BigInteger("251642734006121600000"),
     currentDifficulty = BigDecimal("34093570325203.84"),
 )
+
+val rewardStats = RewardStats(
+    startBlock = 736556,
+    endBlock = 736655,
+    totalReward = "63811748254",
+    totalFee = "1311748254",
+    totalTx = "164216"
+)
+
+val blockFee = BlockFee(
+    averageHeight = 770366,
+    timestamp = 1672858159,
+    averageFees = 25182133,
+    usd = 16920,
+)
+
+val blockReward = BlockReward(
+    averageHeight = 771320,
+    timestamp = 1673376230,
+    averageRewards = 637073344,
+    usd = 17329,
+)
+
+val feeRate = FeeRate(
+    averageHeight = 771322,
+    timestamp = 1673376500,
+    averageFee0 = 1,
+    averageFee10 = 1,
+    averageFee25 = 1,
+    averageFee50 = 1,
+    averageFee75 = 1,
+    averageFee90 = 6,
+    averageFee100 = 251,
+)
+
+val size = Size(
+    averageHeight = 771328,
+    timestamp = 1673377689,
+    averageSize = 1587066,
+)
+
+val weight = Weight(
+    averageHeight = 771328,
+    timestamp = 1673377689,
+    averageWeight = 3998010,
+)
+
+val sizesWeights = SizesWeights(
+    sizes = listOf(size),
+    weights = listOf(weight),
+)
+
+val mempoolBlock = MempoolBlock(
+    blockSize = 1594752,
+    blockVSize = 999659.25,
+    nTx = 3085,
+    totalFees = 14514014,
+    medianFee = 13.776196124950573,
+    feeRange = listOf(
+        6.033519553072626,
+        7.451704545454546,
+        9.107033639143731,
+        12.795174909529553,
+        14.062222222222223,
+        15.933962264150944,
+        20.583355923014366,
+        365.4054054054054,
+    ),
+)
+
+val recommendedFee = RecommendedFee(
+    fastestFee = 14,
+    halfHourFee = 8,
+    hourFee = 5,
+    economyFee = 2,
+    minimumFee = 1,
+)
+
+val histogram = Histogram(
+    arg1 = 17.228699,
+    arg2 = 50022.0,
+)
+
+val mempool = Mempool(
+    count = 3069,
+    vSize = 15926034,
+    totalFee = 28914809,
+    feeHistogram = listOf(histogram),
+)
+
+const val txId = "65b04c4618999a221e8b66943a17c216172a9c865f49c88b76de81212b24bf01"
+
+val mempoolRecent = MempoolRecent(
+    txId= txId,
+    fee= 2475,
+    vSize= 164,
+    value= 514904,
+)

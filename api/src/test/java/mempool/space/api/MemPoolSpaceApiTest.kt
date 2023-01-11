@@ -373,4 +373,96 @@ class MemPoolSpaceApiTest {
         assertEquals(hashRateDifficulty, actual.body())
     }
 
+    @Test
+    fun getRewardStats() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/reward-stats.json"))
+        server.enqueue(response)
+        val actual = api.getRewardStats(100)
+        assertEquals(rewardStats, actual.body())
+    }
+
+    @Test
+    fun getBlockFees() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/block-fees.json"))
+        server.enqueue(response)
+        val actual = api.getBlockFees(TimePeriod.MONTH_3)
+        assertEquals(listOf(blockFee), actual.body())
+    }
+
+    @Test
+    fun getBlockRewards() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/block-rewards.json"))
+        server.enqueue(response)
+        val actual = api.getBlockRewards(TimePeriod.MONTH_3)
+        assertEquals(listOf(blockReward), actual.body())
+    }
+
+    @Test
+    fun getBlockFeeRates() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/fee-rates.json"))
+        server.enqueue(response)
+        val actual = api.getBlockFeeRates(TimePeriod.MONTH_3)
+        assertEquals(listOf(feeRate), actual.body())
+    }
+
+    @Test
+    fun getSizesWeights() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/sizes-weights.json"))
+        server.enqueue(response)
+        val actual = api.getSizesWeights(TimePeriod.WEEK_1)
+        assertEquals(sizesWeights, actual.body())
+    }
+
+    // Fees
+
+    @Test
+    fun getMempoolBlocksFees() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/mempool-blocks.json"))
+        server.enqueue(response)
+        val actual = api.getMempoolBlocksFees()
+        assertEquals(listOf(mempoolBlock), actual.body())
+    }
+
+    @Test
+    fun getRecommendedFees() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/recommended-fee.json"))
+        server.enqueue(response)
+        val actual = api.getRecommendedFees()
+        assertEquals(recommendedFee, actual.body())
+    }
+
+    @Test
+    fun getMempool() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/mempool.json"))
+        server.enqueue(response)
+        val actual = api.getMempool()
+        assertEquals(mempool, actual.body())
+    }
+
+    @Test
+    fun getMempoolTransactionIds() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/mempool-txids.json"))
+        server.enqueue(response)
+        val actual = api.getMempoolTransactionIds()
+        assertEquals(listOf(txId), actual.body())
+    }
+
+    @Test
+    fun getMempoolRecent() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/mempool-recents.json"))
+        server.enqueue(response)
+        val actual = api.getMempoolRecent()
+        assertEquals(listOf(mempoolRecent), actual.body())
+    }
+
 }
