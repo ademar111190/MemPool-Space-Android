@@ -134,4 +134,10 @@ interface MemPoolSpaceApi {
         @Path("slug") slug: String,
     ): Response<List<Block>>
 
+    // https://mempool.space/docs/api/rest#get-hashrate
+    @GET("/api/v1/mining/hashrate/{timePeriod}")
+    suspend fun getHashRate(
+        @Path("timePeriod") timePeriod: TimePeriod,
+    ): Response<HashRateDifficulty>
+
 }

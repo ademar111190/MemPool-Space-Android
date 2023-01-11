@@ -364,4 +364,13 @@ class MemPoolSpaceApiTest {
         assertEquals(errorBody, actual.errorBody()?.string())
     }
 
+    @Test
+    fun getHashRate() = runTest {
+        val response = MockResponse().setResponseCode(200)
+            .setBody(readJson("response/hash-rates-difficulty.json"))
+        server.enqueue(response)
+        val actual = api.getHashRate(TimePeriod.DAY_3)
+        assertEquals(hashRateDifficulty, actual.body())
+    }
+
 }

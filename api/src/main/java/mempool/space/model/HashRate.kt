@@ -8,6 +8,6 @@ import java.math.BigInteger
 data class HashRate(
     @Json(name = "timestamp") val timestamp: Long,
     @Json(name = "avgHashrate") val avgHashRate: BigInteger,
-    @Json(name = "share") val share: Double,
-    @Json(name = "poolName") val poolName: String,
+    @Json(name = "share") val share: Double? = null,
+    @Json(name = "poolName") val poolName: String? = null,
 )

@@ -1,6 +1,7 @@
 package mempool.space
 
 import mempool.space.model.*
+import java.math.BigDecimal
 import java.math.BigInteger
 
 val difficultyAdjustment = DifficultyAdjustment(
@@ -245,4 +246,22 @@ val hashRate = HashRate(
     avgHashRate = BigInteger("64172430960019090000"),
     share = 0.243243,
     poolName = "Foundry USA"
+)
+
+val difficulty = Difficulty(
+    timestamp = 1652468330,
+    difficulty = BigDecimal("31251101365711.12"),
+    height = 736249,
+)
+
+val hashRateDifficulty = HashRateDifficulty(
+    hashRates = listOf(
+        HashRate(
+            timestamp = 1652486400,
+            avgHashRate = BigInteger("236499762108771800000"),
+        )
+    ),
+    difficulties = listOf(difficulty),
+    currentHashRate = BigInteger("251642734006121600000"),
+    currentDifficulty = BigDecimal("34093570325203.84"),
 )
