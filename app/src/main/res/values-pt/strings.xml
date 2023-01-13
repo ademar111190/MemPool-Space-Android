@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">MemPool Space</string>
+    <string name="app_unknown_error">Erro desconhecido</string>
+    <string name="nav_back">Voltar</string>
+    <string name="bitcoin_address">Endereço Bitcoin</string>
+    <string name="execute">Executar</string>
+    <string name="start_over">Começar de novo</string>
+    <string name="result">Resultado:</string>
     <string name="page_title_mainnet">Rede Principal</string>
     <string name="page_title_signet">Rede Signet</string>
     <string name="page_title_testnet">Rede de Testes</string>

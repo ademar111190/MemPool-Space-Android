@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">MemPool Space</string>
+    <string name="app_unknown_error">Unknown error</string>
+    <string name="nav_back">Back</string>
+    <string name="bitcoin_address">Bitcoin Address</string>
+    <string name="execute">Execute</string>
+    <string name="start_over">Start over</string>
+    <string name="result">Result:</string>
     <string name="page_title_mainnet">Mainnet</string>
     <string name="page_title_signet">Signet</string>
     <string name="page_title_testnet">Testnet</string>

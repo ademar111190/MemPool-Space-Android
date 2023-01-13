@@ -32,7 +32,9 @@ class ConsoleViewModel @Inject constructor(
         state.emit(
             ConsoleState.ConsoleData(
                 mapOf(
-                    ApiRegion(resources.getString(R.string.console_mempool_api_region_address)) to listOf(),
+                    ApiRegion(resources.getString(R.string.console_mempool_api_region_address)) to listOf(
+                        ApiMethod("getAddress"),
+                    ),
                     ApiRegion(resources.getString(R.string.console_mempool_api_region_block)) to listOf(),
                     ApiRegion(resources.getString(R.string.console_mempool_api_region_mining)) to listOf(),
                     ApiRegion(resources.getString(R.string.console_mempool_api_region_fees)) to listOf(),

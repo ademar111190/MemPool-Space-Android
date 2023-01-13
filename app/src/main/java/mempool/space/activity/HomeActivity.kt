@@ -13,19 +13,24 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
 import mempool.space.model.Network
 import mempool.space.page.console.ConsolePage
+import mempool.space.page.console.address.GetAddressPage
 import mempool.space.page.settings.SettingsPage
 import mempool.space.ui.Page
 import mempool.space.ui.page.NetPage
 import mempool.space.ui.theme.MemPoolSpaceTheme
+import org.slf4j.LoggerFactory
 
 @AndroidEntryPoint
 class HomeActivity : ComponentActivity() {
+    private val log = LoggerFactory.getLogger("HomeActivity")
 
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +52,7 @@ class HomeActivity : ComponentActivity() {
                             Page.TestNetPage.route -> 2
                             Page.ConsolePage.route -> 3
                             Page.SettingsPage.route -> 4
-                            else -> 0
+                            else -> selectedIndex
                         }
                     }
 
@@ -106,10 +111,19 @@ class HomeActivity : ComponentActivity() {
                                 )
                             }
                             composable(Page.ConsolePage.route) {
-                                ConsolePage()
+                                ConsolePage(navController)
                             }
                             composable(Page.SettingsPage.route) {
                                 SettingsPage()
+                            }
+                            composable(
+                                "console/{method}",
+                                arguments = listOf(navArgument("method") { type = NavType.StringType })
+                            ) { backStackEntry ->
+                                when (val method = backStackEntry.arguments?.getString("method")) {
+                                    "getAddress" -> GetAddressPage(navController)
+                                    else -> log.error("Unknown method: $method")
+                                }
                             }
                         }
                     }

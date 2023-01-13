@@ -22,6 +22,10 @@ import javax.inject.Inject
         prefs.edit().remove(KEY_URL).apply()
     }
 
+    fun baseUrl(): String {
+        return prefs.getString(KEY_URL, DEFAULT_URL) ?: DEFAULT_URL
+    }
+
 }
 
 private const val DEFAULT_URL = "https://mempool.space"
