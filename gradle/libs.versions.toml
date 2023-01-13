@@ -46,7 +46,7 @@ network = ["moshi", "moshiKotlin", "okHttp", "okHttpLoggingInterceptor", "retrof
 unitTest = ["coroutineTest", "junit", "logBack", "okHttpMockWebServer"]
 
 [plugins]
-androidApp = { id = "com.android.application", version = "7.3.1" }
+androidApp = { id = "com.android.application", version = "7.4.0" }
 androidLib = { id = "com.android.library", version = "7.3.1" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
