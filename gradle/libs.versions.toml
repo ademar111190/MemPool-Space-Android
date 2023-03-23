@@ -37,7 +37,7 @@ okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor"
 okHttpMockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okHttp" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
-slf4j = { module = "org.slf4j:slf4j-api", version = "1.7.36" }
+slf4j = { module = "org.slf4j:slf4j-api", version = "2.0.7" }
 viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.5.1" }
 
 [bundles]
