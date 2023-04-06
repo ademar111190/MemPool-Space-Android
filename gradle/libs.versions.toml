@@ -13,7 +13,7 @@ biometric = { module = "androidx.biometric:biometric", version = "1.2.0-alpha05"
 composeActivity = { module = "androidx.activity:activity-compose", version = "1.7.0" }
 composeMaterial3 = { module = "androidx.compose.material3:material3", version = "1.1.0-beta01" }
 composePreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
-composeIconsExtended = { module = "androidx.compose.material:material-icons-extended", version = "1.4.0" }
+composeIconsExtended = { module = "androidx.compose.material:material-icons-extended", version = "1.4.1" }
 composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
