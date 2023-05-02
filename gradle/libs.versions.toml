@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "8.0.0"
+androidGradlePlugin = "8.0.1"
 compose = "1.4.2"
 coroutine = "1.6.4"
 hilt = "2.46"
