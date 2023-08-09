@@ -25,7 +25,7 @@ hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref
 hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.1.0-alpha01" }
 junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.1" }
-logBack = { module = "ch.qos.logback:logback-classic", version = "1.4.9" }
+logBack = { module = "ch.qos.logback:logback-classic", version = "1.4.10" }
 logBackAndroid = { module = "com.github.tony19:logback-android", version = "3.0.0" }
 material = { module = "com.google.android.material:material", version = "1.9.0" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
