@@ -24,7 +24,7 @@ hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" 
 hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.1.0-alpha01" }
 junit = { module = "junit:junit", version = "4.13.2" }
-lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.1" }
+lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.2" }
 logBack = { module = "ch.qos.logback:logback-classic", version = "1.4.11" }
 logBackAndroid = { module = "com.github.tony19:logback-android", version = "3.0.0" }
 material = { module = "com.google.android.material:material", version = "1.9.0" }
@@ -38,7 +38,7 @@ okHttpMockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.r
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 slf4j = { module = "org.slf4j:slf4j-api", version = "2.0.9" }
-viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.1" }
+viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.2" }
 
 [bundles]
 compose = ["composeActivity", "composeMaterial3", "composePreview", "composeIconsExtended", "composeUi"]
