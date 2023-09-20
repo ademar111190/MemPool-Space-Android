@@ -31,7 +31,7 @@ material = { module = "com.google.android.material:material", version = "1.9.0" 
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshiCompiler = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
 moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
-navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.2" }
+navigation = { module = "androidx.navigation:navigation-compose", version = "2.7.3" }
 okHttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
 okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp" }
 okHttpMockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okHttp" }
