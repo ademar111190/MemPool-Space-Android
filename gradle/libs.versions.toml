@@ -22,7 +22,7 @@ coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", versi
 coroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
 hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
-hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.1.0-rc01" }
+hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.1.0" }
 junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.2" }
 logBack = { module = "ch.qos.logback:logback-classic", version = "1.4.11" }
