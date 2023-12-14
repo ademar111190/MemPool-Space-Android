@@ -27,7 +27,7 @@ junit = { module = "junit:junit", version = "4.13.2" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.2" }
 logBack = { module = "ch.qos.logback:logback-classic", version = "1.4.14" }
 logBackAndroid = { module = "com.github.tony19:logback-android", version = "3.0.0" }
-material = { module = "com.google.android.material:material", version = "1.10.0" }
+material = { module = "com.google.android.material:material", version = "1.11.0" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshiCompiler = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
 moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
