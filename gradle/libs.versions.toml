@@ -2,7 +2,7 @@
 androidGradlePlugin = "8.2.2"
 compose = "1.6.2"
 coroutine = "1.8.0"
-hilt = "2.50"
+hilt = "2.51"
 kotlin = "1.9.22"
 moshi = "1.15.1"
 okHttp = "4.12.0"
