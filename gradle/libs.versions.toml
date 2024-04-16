@@ -6,7 +6,7 @@ hilt = "2.51"
 kotlin = "1.9.23"
 moshi = "1.15.1"
 okHttp = "4.12.0"
-retrofit = "2.9.0"
+retrofit = "2.11.0"
 
 [libraries]
 biometric = { module = "androidx.biometric:biometric", version = "1.2.0-alpha05" }
