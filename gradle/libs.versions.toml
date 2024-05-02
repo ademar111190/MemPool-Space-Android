@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.4.0"
-compose = "1.6.5"
+compose = "1.6.7"
 coroutine = "1.8.0"
 hilt = "2.51.1"
 kotlin = "1.9.23"
